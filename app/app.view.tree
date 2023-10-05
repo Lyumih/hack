@@ -1,0 +1,58 @@
+$hack_app $mol_book2_catalog
+	menu_title \Хакатоны Hyper Dev Guild
+	param \page
+	menu_tools /
+		<= Telegram $mol_link_iconed
+			uri \https://t.me/h_y_o_o/1074
+			title null
+	menu_foot /
+		<= GitHub $mol_link_source uri \https://github.com/Lyumih/hack
+	spreads *
+		about <= About_page $mol_page
+			title \Знакомство
+			body /
+				<= About_text $mol_text text \
+					\# Рады с вами познакомиться!
+					\Команда [Hyper Dev Guild](https://t.me/h_y_o_o/1074) собрала информацию по хакатонам
+					\Она будет полезна как для новичков, так и для тех кто уже съел собаку на них.
+					\Мы постарались ответить на основные вопросы и дать инструкции на основные этапы хакатонов.
+					\А также сократить время на рутину и менеджмент, которая тратится во время хакатонов
+					\# Разделы
+					\- **[Первый Хакатон](#!page=first)** - полезен для новичков. В нём собрано описание, что такое хакатон
+					\- **[Презентация и Дизайн](#!page=design)** - рассказываем, что как сделать презентацию и дизайн
+					\- **[Старт проекта](#!page=start)** - быстрый старт по технологиям для бэка и фронта, если не знаете что выбрать
+					\- **[Примеры решений](#!page=examples)** - поделитесь вашими решениями уже с готовых хакатонов
+					\
+					\# О нас
+					\[Hyper Dev Guild](https://t.me/h_y_o_o/1074) - Сообщество гипер-разработчиков, двигающих индустрию вперёд.
+					\*Будем рады видеть вас в наших рядах!*
+					\Мы развиваем Open Source технологии на основе:
+					\- веб-фреймворка [$mol](https://mol.hyoo.ru/) (https://github.com/hyoo-ru/crowd.hyoo.ru/)
+					\- и оффлайн децентрализованной базе данных [crowd](https://crowd.hyoo.ru/) (https://github.com/hyoo-ru/crowd.hyoo.ru/)
+		first <= First_page $mol_book2_catalog
+			menu_title \Первый хакатон
+			param \first
+			spreads *
+				what_is <= What_is $mol_page
+					title \Что такое хакатон
+				roles <= Roles $mol_page
+					title \Роли в команде
+				myths <= Myths $mol_page
+					title \Мифы
+		design <= Design $mol_book2_catalog
+			title \Презентация и Дизайн
+			param \design
+		start <= Start_page $mol_book2_catalog
+			menu_title \Старт проекта
+			param \start
+			spreads *
+				front <= Front $mol_page
+					title \Фронтенд
+				back <= Back $mol_page
+					title \Бэкенд
+				bd <= Bd $mol_page
+					title \БД
+				hosting <= Hosting $mol_page
+					title \Хостинг
+		examples <= Examples_page $mol_page
+			title \Примеры решений
