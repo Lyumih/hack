@@ -19,7 +19,7 @@ $hack_app $mol_book2_catalog
 					\А также сократить время на рутину и менеджмент, которая тратится во время хакатонов
 					\# Разделы
 					\- **[Первый Хакатон](#!page=first)** - полезен для новичков. В нём собрано описание, что такое хакатон
-					\- **[Презентация и Дизайн](#!page=design)** - рассказываем, что как сделать презентацию и дизайн
+					\- **[Презентация и Дизайн](#!page=pres_design)** - рассказываем, что как сделать презентацию и дизайн
 					\- **[Старт проекта](#!page=start)** - быстрый старт по технологиям для бэка и фронта, если не знаете что выбрать
 					\- **[Примеры решений](#!page=examples)** - поделитесь вашими решениями уже с готовых хакатонов
 					\
@@ -35,13 +35,22 @@ $hack_app $mol_book2_catalog
 			spreads *
 				what_is <= What_is $mol_page
 					title \Что такое хакатон
+				dict <= Dict $mol_page
+					title \Термины
 				roles <= Roles $mol_page
 					title \Роли в команде
 				myths <= Myths $mol_page
 					title \Мифы
-		design <= Design $mol_book2_catalog
-			title \Презентация и Дизайн
+		pres_design <= Pres_design $mol_book2_catalog
+			menu_title \Презентация и Дизайн
 			param \design
+			spreads *
+				pres <= Presentation $mol_page
+					title \Презентация Google
+				design <= Design $mol_page
+					title \Дизайн Figma
+				diagram <= Diagram $mol_page
+					title \Диаграммы
 		start <= Start_page $mol_book2_catalog
 			menu_title \Старт проекта
 			param \start
@@ -56,3 +65,10 @@ $hack_app $mol_book2_catalog
 					title \Хостинг
 		examples <= Examples_page $mol_page
 			title \Примеры решений
+			body /
+				<= Dosha $mol_link
+					title \"Добрый шаг" - Кокос 2023г
+					uri \https://lyumih.github.io/dosha/
+				<= VTB24 $mol_link
+					title \"Money Card Hero" - ВТБ24 хакатон 2023г
+					uri \https://lyumih.github.io/money/
