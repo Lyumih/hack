@@ -1,0 +1,10 @@
+{
+	"name": "hack_app",
+	"short_name": "hack_app",
+	"description": "",
+	"id": "hack_app",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#000000",
+	"theme_color": "#000000"
+}
